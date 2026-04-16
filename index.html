@@ -1162,20 +1162,35 @@
       }
     });
 
-    const IQ_REDTRACK_LINK = "https://inpmz.ttrk.io/track.js?rtkcmpid=66ff7f75438fb8664f8162d7";
-    const EX_REDTRACK_LINK = "https://inpmz.ttrk.io/track.js?rtkcmpid=69d60b99a43141ade9d80372";
+    const COMMON_CLICK_URL = "https://inpmz.ttrk.io/click";
+
+    const TRACK_URLS = {
+      iq: "https://inpmz.ttrk.io/track.js?rtkcmpid=66ff7f75438fb8664f8162d7",
+      ex: "https://inpmz.ttrk.io/track.js?rtkcmpid=69d60b99a43141ade9d80372"
+    };
+
+    function fireTrackerAndRedirect(offer) {
+      const script = document.createElement("script");
+      script.src = TRACK_URLS[offer];
+      script.async = true;
+      document.body.appendChild(script);
+
+      setTimeout(function () {
+        window.location.href = COMMON_CLICK_URL;
+      }, 400);
+    }
 
     document.querySelectorAll('[data-offer="iq"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = IQ_REDTRACK_LINK;
+        fireTrackerAndRedirect('iq');
       });
     });
 
     document.querySelectorAll('[data-offer="ex"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = EX_REDTRACK_LINK;
+        fireTrackerAndRedirect('ex');
       });
     });
   </script>
