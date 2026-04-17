@@ -57,6 +57,10 @@
       display: block;
     }
 
+    button {
+      font-family: inherit;
+    }
+
     .container {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
@@ -198,7 +202,8 @@
 
     .btn-main,
     .btn-alt,
-    .offer-btn {
+    .offer-btn,
+    .sticky-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -209,6 +214,7 @@
       transition: 0.25s ease;
       cursor: pointer;
       border: 0;
+      text-decoration: none;
     }
 
     .btn-main {
@@ -607,9 +613,6 @@
     }
 
     .sticky-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       background: var(--green);
       color: #07130b;
       padding: 14px 20px;
@@ -796,7 +799,6 @@
       }
 
       .two-btn {
-        display: flex;
         flex-direction: row;
         column-gap: 10px;
       }
@@ -849,8 +851,19 @@
           </div>
 
           <div class="hero-actions">
-            <a href="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}" class="btn-main btn-main-new">Signup With IQ Option</a>
-            <a href="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}" class="btn-alt">Signup With Exnova</a>
+            <button
+              type="button"
+              class="btn-main btn-main-new offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Signup With IQ Option
+            </button>
+
+            <button
+              type="button"
+              class="btn-alt offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Signup With Exnova
+            </button>
           </div>
         </div>
 
@@ -884,25 +897,19 @@
             </p>
 
             <table class="offer-table">
-              <tr>
-                <td>Min Deposit</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <td>Best For</td>
-                <td>Beginners & long-term users</td>
-              </tr>
-              <tr>
-                <td>Interface</td>
-                <td>Simple and easy to use</td>
-              </tr>
-              <tr>
-                <td>Popular For</td>
-                <td>Demo access and beginner-friendly tools</td>
-              </tr>
+              <tr><td>Min Deposit</td><td>$10</td></tr>
+              <tr><td>Best For</td><td>Beginners & long-term users</td></tr>
+              <tr><td>Interface</td><td>Simple and easy to use</td></tr>
+              <tr><td>Popular For</td><td>Demo access and beginner-friendly tools</td></tr>
             </table>
 
-            <a href="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}" class="offer-btn btn-iq">Start Trading with IQ Option</a>
+            <button
+              type="button"
+              class="offer-btn btn-iq offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Start Trading with IQ Option
+            </button>
+
             <div class="offer-note">Quick setup • Smooth dashboard • Easy start</div>
           </div>
 
@@ -922,25 +929,19 @@
             </p>
 
             <table class="offer-table">
-              <tr>
-                <td>Min Deposit</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <td>Best For</td>
-                <td>Quick setup & easy interface</td>
-              </tr>
-              <tr>
-                <td>Interface</td>
-                <td>Modern and lightweight</td>
-              </tr>
-              <tr>
-                <td>Popular For</td>
-                <td>Fast registration and easy navigation</td>
-              </tr>
+              <tr><td>Min Deposit</td><td>$10</td></tr>
+              <tr><td>Best For</td><td>Quick setup & easy interface</td></tr>
+              <tr><td>Interface</td><td>Modern and lightweight</td></tr>
+              <tr><td>Popular For</td><td>Fast registration and easy navigation</td></tr>
             </table>
 
-            <a href="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}" class="offer-btn btn-ex">Start Trading with Exnova</a>
+            <button
+              type="button"
+              class="offer-btn btn-ex offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Start Trading with Exnova
+            </button>
+
             <div class="offer-note">Easy onboarding • Clean design • Beginner friendly</div>
           </div>
         </div>
@@ -954,30 +955,19 @@
         <div class="devices-grid">
           <div class="device-card active">
             <img src="./android.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>Android</h3>
-            </div>
+            <div class="device-content"><h3>Android</h3></div>
           </div>
-
           <div class="device-card">
             <img src="./ios.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>iOS</h3>
-            </div>
+            <div class="device-content"><h3>iOS</h3></div>
           </div>
-
           <div class="device-card">
             <img src="./win.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>Windows</h3>
-            </div>
+            <div class="device-content"><h3>Windows</h3></div>
           </div>
-
           <div class="device-card">
             <img src="./macos.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>MacOS</h3>
-            </div>
+            <div class="device-content"><h3>MacOS</h3></div>
           </div>
         </div>
       </div>
@@ -1020,7 +1010,6 @@
 
         <div class="info-card">
           <h3>Trade Anytime, Anywhere</h3>
-
           <div class="bullet-list">
             <div class="bullet">✔ Beginner-friendly platforms for users getting started</div>
             <div class="bullet">✔ Mobile access so you can check markets throughout the day</div>
@@ -1109,7 +1098,6 @@
   <footer class="footer">
     <div class="container">
       This is not an official website. Trading involves risk. This content is for informational purposes only and not financial advice.
-
       <div class="footer-links">
         <a href="#how-it-works">How It Works</a>
         <a href="#faq">FAQ</a>
@@ -1125,8 +1113,19 @@
         <strong>Visit Official Site</strong>
       </div>
       <div class="two-btn">
-        <a href="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}" class="sticky-btn">IQ Option Free Demo</a>
-        <a href="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}" class="sticky-btn">Exnova Free Demo</a>
+        <button
+          type="button"
+          class="sticky-btn offer-redirect"
+          data-url="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+          IQ Option Free Demo
+        </button>
+
+        <button
+          type="button"
+          class="sticky-btn offer-redirect"
+          data-url="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+          Exnova Free Demo
+        </button>
       </div>
     </div>
   </div>
@@ -1160,6 +1159,21 @@
           item.classList.toggle('active');
         });
       }
+    });
+
+    document.querySelectorAll('.offer-redirect').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof e.stopImmediatePropagation === 'function') {
+          e.stopImmediatePropagation();
+        }
+
+        const url = btn.getAttribute('data-url');
+        if (!url) return;
+
+        window.location.assign(url);
+      }, true);
     });
   </script>
 
