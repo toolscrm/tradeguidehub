@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start Trading Onlines</title>
+  <title>Start Trading Online</title>
   <style>
     * {
       box-sizing: border-box;
@@ -57,6 +57,10 @@
       display: block;
     }
 
+    button {
+      font-family: inherit;
+    }
+
     .container {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
@@ -87,10 +91,6 @@
       flex-shrink: 0;
     }
 
-    .brand span {
-      color: var(--accent);
-    }
-
     .nav-wrap {
       display: flex;
       align-items: center;
@@ -114,24 +114,6 @@
     .main-nav a:hover,
     .main-nav a.active {
       color: #fff;
-    }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(41, 98, 255, 0.28);
     }
 
     .menu-toggle {
@@ -202,9 +184,9 @@
     }
 
     .hero-pill {
-          background: rgb(229 120 225 / 81%);
-    border: 1px solid var(--line);
-    color: #d7dfed;
+      background: rgb(229 120 225 / 81%);
+      border: 1px solid var(--line);
+      color: #d7dfed;
       padding: 10px 14px;
       border-radius: 999px;
       font-size: 12px;
@@ -220,7 +202,8 @@
 
     .btn-main,
     .btn-alt,
-    .offer-btn {
+    .offer-btn,
+    .sticky-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -229,6 +212,9 @@
       border-radius: 14px;
       font-weight: 700;
       transition: 0.25s ease;
+      cursor: pointer;
+      border: 0;
+      text-decoration: none;
     }
 
     .btn-main {
@@ -462,7 +448,6 @@
     .step-card,
     .trust-card,
     .faq-item,
-    .legal-card,
     .info-card {
       background: linear-gradient(180deg, var(--card), var(--card-2));
       border: 1px solid var(--line);
@@ -573,29 +558,6 @@
       display: block;
     }
 
-    .cta-band {
-      margin: 10px 0 40px;
-      background: linear-gradient(90deg, rgba(41,98,255,0.22), rgba(34,197,94,0.18));
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .cta-band h3 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .cta-band p {
-      color: #d6deeb;
-      max-width: 660px;
-    }
-
     .footer {
       border-top: 1px solid var(--line);
       padding: 24px 0 110px;
@@ -651,9 +613,6 @@
     }
 
     .sticky-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       background: var(--green);
       color: #07130b;
       padding: 14px 20px;
@@ -667,8 +626,10 @@
       transform: translateY(-2px);
     }
 
-    .mobile-p {
-      display: block;
+    .two-btn {
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
     }
 
     .mobile-c {
@@ -678,7 +639,6 @@
     @media (max-width: 1024px) {
       .hero-grid,
       .feature-layout,
-      .legal-grid,
       .listing-wrap {
         grid-template-columns: 1fr;
       }
@@ -690,11 +650,6 @@
 
       .devices-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .cta-band {
-        flex-direction: column;
-        align-items: flex-start;
       }
     }
 
@@ -728,29 +683,14 @@
         gap: 14px;
       }
 
-      .main-nav a,
-      .nav-cta {
+      .main-nav a {
         width: 100%;
-      }
-
-      .nav-cta {
-        justify-content: center;
       }
     }
 
     @media (max-width: 640px) {
       .container {
         width: min(100% - 24px, 1180px);
-      }
-
-      .btn-alt {
-        font-size: 17px;
-      }
-
-      .btn-main-new {
-        display: block;
-        text-align: center;
-        font-size: 17px;
       }
 
       .devices-grid {
@@ -767,12 +707,8 @@
         padding-bottom: 16px !important;
       }
 
-          .hero-points {
+      .hero-points {
         justify-content: center;
-    }
-
-      .mobile-p {
-        display: none;
       }
 
       .mobile-c {
@@ -800,20 +736,17 @@
       .sticky-btn,
       .offer-btn {
         width: 100%;
-        min-width: 100px!important;
+        min-width: 100px !important;
       }
 
       .how-grid,
       .trust-grid,
       .devices-grid,
-      .legal-grid,
       .listing-wrap {
         grid-template-columns: 1fr;
       }
 
-      .info-card h3,
-      .cta-band h3,
-      .legal-card h3 {
+      .info-card h3 {
         font-size: 24px;
       }
 
@@ -859,33 +792,32 @@
       .rating-box {
         white-space: normal;
       }
+
       .sticky-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--green);
-        color: #07130b;
         padding: 14px 14px;
-        border-radius: 12px;
-        font-weight: 700;
-        min-width: 220px;
-        transition: 0.25s ease;
         font-size: 14px;
       }
-      .two-btn{
-        display: flex;
+
+      .two-btn {
         flex-direction: row;
         column-gap: 10px;
       }
+
+      .gt_float_switcher {
+        opacity: 1;
+        position: relative;
+        top: -7px;
+      }
     }
   </style>
-  <script type="text/javascript" src="https://inpmz.ttrk.io/track.js?rtkcmpid=66ff7f75438fb8664f8162d7"></script>
 </head>
 <body>
 
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="#top" class="brand"><img src="./logo.png" alt="" style="width:200px;"></a>
+      <a href="#top" class="brand"><img src="./logo.png" alt="Logo" style="width:200px;"></a>
+
+      <div class="gtranslate_wrapper"></div>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" type="button">
         <span></span>
@@ -919,8 +851,19 @@
           </div>
 
           <div class="hero-actions">
-            <a href="https://inpmz.ttrk.io/click" class="btn-main btn-main-new">Signup With IQ Option</a>
-            <a href="https://inpmz.ttrk.io/click" class="btn-alt">Signup With Exnova</a>
+            <button
+              type="button"
+              class="btn-main btn-main-new offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Signup With IQ Option
+            </button>
+
+            <button
+              type="button"
+              class="btn-alt offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Signup With Exnova
+            </button>
           </div>
         </div>
 
@@ -954,25 +897,19 @@
             </p>
 
             <table class="offer-table">
-              <tr>
-                <td>Min Deposit</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <td>Best For</td>
-                <td>Beginners & long-term users</td>
-              </tr>
-              <tr>
-                <td>Interface</td>
-                <td>Simple and easy to use</td>
-              </tr>
-              <tr>
-                <td>Popular For</td>
-                <td>Demo access and beginner-friendly tools</td>
-              </tr>
+              <tr><td>Min Deposit</td><td>$10</td></tr>
+              <tr><td>Best For</td><td>Beginners & long-term users</td></tr>
+              <tr><td>Interface</td><td>Simple and easy to use</td></tr>
+              <tr><td>Popular For</td><td>Demo access and beginner-friendly tools</td></tr>
             </table>
 
-            <a href="https://inpmz.ttrk.io/click" class="offer-btn btn-iq">Start Trading with IQ Option</a>
+            <button
+              type="button"
+              class="offer-btn btn-iq offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Start Trading with IQ Option
+            </button>
+
             <div class="offer-note">Quick setup • Smooth dashboard • Easy start</div>
           </div>
 
@@ -992,25 +929,19 @@
             </p>
 
             <table class="offer-table">
-              <tr>
-                <td>Min Deposit</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <td>Best For</td>
-                <td>Quick setup & easy interface</td>
-              </tr>
-              <tr>
-                <td>Interface</td>
-                <td>Modern and lightweight</td>
-              </tr>
-              <tr>
-                <td>Popular For</td>
-                <td>Fast registration and easy navigation</td>
-              </tr>
+              <tr><td>Min Deposit</td><td>$10</td></tr>
+              <tr><td>Best For</td><td>Quick setup & easy interface</td></tr>
+              <tr><td>Interface</td><td>Modern and lightweight</td></tr>
+              <tr><td>Popular For</td><td>Fast registration and easy navigation</td></tr>
             </table>
 
-            <a href="https://inpmz.ttrk.io/click" class="offer-btn btn-ex">Start Trading with Exnova</a>
+            <button
+              type="button"
+              class="offer-btn btn-ex offer-redirect"
+              data-url="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+              Start Trading with Exnova
+            </button>
+
             <div class="offer-note">Easy onboarding • Clean design • Beginner friendly</div>
           </div>
         </div>
@@ -1024,30 +955,19 @@
         <div class="devices-grid">
           <div class="device-card active">
             <img src="./android.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>Android</h3>
-            </div>
+            <div class="device-content"><h3>Android</h3></div>
           </div>
-
           <div class="device-card">
             <img src="./ios.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>iOS</h3>
-            </div>
+            <div class="device-content"><h3>iOS</h3></div>
           </div>
-
-         <div class="device-card">
+          <div class="device-card">
             <img src="./win.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>Windows</h3>
-            </div>
+            <div class="device-content"><h3>Windows</h3></div>
           </div>
-
           <div class="device-card">
             <img src="./macos.svg" alt="" style="max-width: 30px; width: 100%;">
-            <div class="device-content">
-              <h3>MacOS</h3>
-            </div>
+            <div class="device-content"><h3>MacOS</h3></div>
           </div>
         </div>
       </div>
@@ -1090,14 +1010,12 @@
 
         <div class="info-card">
           <h3>Trade Anytime, Anywhere</h3>
-
           <div class="bullet-list">
             <div class="bullet">✔ Beginner-friendly platforms for users getting started</div>
             <div class="bullet">✔ Mobile access so you can check markets throughout the day</div>
             <div class="bullet">✔ Clear buy and sell flow without unnecessary clutter</div>
             <div class="bullet">✔ Follow price movement and track results in one place</div>
           </div>
-
         </div>
       </div>
     </section>
@@ -1175,13 +1093,11 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="container">
       This is not an official website. Trading involves risk. This content is for informational purposes only and not financial advice.
-
       <div class="footer-links">
         <a href="#how-it-works">How It Works</a>
         <a href="#faq">FAQ</a>
@@ -1197,9 +1113,20 @@
         <strong>Visit Official Site</strong>
       </div>
       <div class="two-btn">
-      <a href="https://inpmz.ttrk.io/click" class="sticky-btn">IQ Option Free Demo</a>
-      <a href="https://inpmz.ttrk.io/click" class="sticky-btn">Exnova Free Demo</a>
-     </div>
+        <button
+          type="button"
+          class="sticky-btn offer-redirect"
+          data-url="https://inpmz.ttrk.io/69e1be4c4a4292f361f3a36b?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+          IQ Option Free Demo
+        </button>
+
+        <button
+          type="button"
+          class="sticky-btn offer-redirect"
+          data-url="https://inpmz.ttrk.io/69e1bfb4e46095d21ff4b2c4?utm_campaign={replace}&sub2={keyword}&sub3={matchtype}&sub4={adgroupid}&sub5={creative}&sub6={campaignid}&sub7={device}&sub8={adposition}&sub9={network}&sub10={placement}&utm_source=Google&wbraid={wbraid}&gbraid={gbraid}&ref_id={gclid}">
+          Exnova Free Demo
+        </button>
+      </div>
     </div>
   </div>
 
@@ -1209,27 +1136,57 @@
     const navLinks = document.querySelectorAll('.nav-link, .main-nav a');
     const faqItems = document.querySelectorAll('.faq-item');
 
-    menuToggle.addEventListener('click', function () {
-      menuToggle.classList.toggle('active');
-      navWrap.classList.toggle('open');
-      document.body.classList.toggle('menu-open');
-    });
+    if (menuToggle && navWrap) {
+      menuToggle.addEventListener('click', function () {
+        menuToggle.classList.toggle('active');
+        navWrap.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
+    }
 
     navLinks.forEach(link => {
       link.addEventListener('click', function () {
-        navWrap.classList.remove('open');
-        menuToggle.classList.remove('active');
+        if (navWrap) navWrap.classList.remove('open');
+        if (menuToggle) menuToggle.classList.remove('active');
         document.body.classList.remove('menu-open');
       });
     });
 
     faqItems.forEach(item => {
       const btn = item.querySelector('.faq-question');
-      btn.addEventListener('click', function () {
-        item.classList.toggle('active');
-      });
+      if (btn) {
+        btn.addEventListener('click', function () {
+          item.classList.toggle('active');
+        });
+      }
+    });
+
+    document.querySelectorAll('.offer-redirect').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof e.stopImmediatePropagation === 'function') {
+          e.stopImmediatePropagation();
+        }
+
+        const url = btn.getAttribute('data-url');
+        if (!url) return;
+
+        window.location.assign(url);
+      }, true);
     });
   </script>
+
+  <script>
+    window.gtranslateSettings = {
+      "default_language":"en",
+      "languages":["en","fr","it","es","pt","th","ms","de","pl"],
+      "wrapper_selector":".gtranslate_wrapper",
+      "switcher_horizontal_position":"right",
+      "switcher_vertical_position":"top"
+    };
+  </script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 </body>
 </html>
