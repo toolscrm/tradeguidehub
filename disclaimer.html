@@ -97,9 +97,49 @@
 
 <footer class="footer">
   <div class="container">
-    <p>Trading involves risk. Informational page only.</p>
-    <p class="arabic">التداول ينطوي على مخاطر. صفحة معلومات فقط.</p>
+    <p class="disclosure-b">
+      Disclosure: This website contains affiliate links, which means we may receive a commission if you click a link and purchase something that we have recommended. While clicking these links won't cost you any extra money, it helps us keep this site up and running. We only promote products or services we genuinely believe will add value to our readers.
+ 
+As an Associate and affiliate for other programs, we earn from qualifying purchases. All affiliate relationships are disclosed in accordance with the Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+ 
+    </p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="https://inpmz.ttrk.io/click">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
   </div>
+
+  <div class="sticky-cta">
+  <div class="sticky-wrap">
+    <div class="sticky-text">
+      <strong>Start Trading Online</strong>
+      Its not an official site
+    </div>
+
+    <a href="https://inpmz.ttrk.io/click" class="sticky-btn">Visit Official Site</a>
+  </div>
+</div>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("show");
+  });
+
+  mainNav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      mainNav.classList.remove("show");
+    });
+  });
+</script>
 </footer>
 
 </body>
